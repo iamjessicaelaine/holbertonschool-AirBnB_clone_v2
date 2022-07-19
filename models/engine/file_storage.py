@@ -8,10 +8,8 @@ class FileStorage:
     __file_path = 'file.json'
     __objects = {}
 
-    def all(self, cls=None):
+    def all(self):
         """Returns dict of models currently in storage w/ optional filtering"""
-        if cls is not None:
-            for k in FileStorage.__objects:
         return FileStorage.__objects
 
     def new(self, obj):
