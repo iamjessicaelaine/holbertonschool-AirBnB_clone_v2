@@ -12,7 +12,7 @@ class FileStorage:
         """Returns dict of models currently in storage w/ optional filtering"""
         if cls is not None:
             filteredobjs = {}
-            for key in FileStorage.__objects.keys():
+            for key in FileStorage.__objects:
                 # find class name
                 if key.__class__ == cls:
                     # add to filtered dictionary
@@ -60,7 +60,9 @@ class FileStorage:
 
     def delete(self, obj=None):
         """Deletes obj from __objects if it exists"""
-        if obj != None:
-            self.__objects.pop(obj)
+        if obj is not None:  # obj is a value in dictionaries
+            if obj in self.__objects.values():  # get key so you can pop item
+                objkey = obj.__class__.__name__ + "." + obj.id
+                self.__objects.pop(objkey, None)
         else:
             pass
