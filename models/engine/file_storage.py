@@ -14,7 +14,7 @@ class FileStorage:
             filteredobjs = {}
             for key in FileStorage.__objects:
                 # find class name
-                if key.__class__ == cls:
+                if key == cls:
                     # add to filtered dictionary
                     filteredobjs[key] = self.__objects[key]
             return filteredobjs
