@@ -12,11 +12,11 @@ class FileStorage:
         """Returns dict of models currently in storage w/ optional filtering"""
         if cls is not None:
             filteredobjs = {}
-            for key in self.__objects.keys():
+            for key, value in self.__objects.items():
                 # find class name
-                if key == cls:
+                if value.__class__.__name__ == cls.__name__:
                     # add to filtered dictionary
-                    filteredobjs[key] = self.__objects[key]
+                    filteredobjs[key] = value
             return filteredobjs
         else:
             return FileStorage.__objects
