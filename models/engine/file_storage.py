@@ -63,3 +63,4 @@ class FileStorage:
         if obj is not None:
             delobj = obj.__class.__name__ + '.' + obj.id
             del self.__objects[delobj]
+            self.save
