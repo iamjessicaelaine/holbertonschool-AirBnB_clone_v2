@@ -65,4 +65,4 @@ class FileStorage:
                 objkey = obj.__class__.__name__ + "." + obj.id
                 self.__objects.pop(objkey, None)
         else:
-            pass
+            return
