@@ -63,5 +63,5 @@ class FileStorage:
         if obj in self.__objects.values():  # search __objects for obj 
             key = obj.__class__.__name__ + "." + obj.id  #assign the key appropriately
             self.__objects.pop(key, None)
-        else:
+        elif obj is None:
             return
