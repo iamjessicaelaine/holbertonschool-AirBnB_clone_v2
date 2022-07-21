@@ -64,5 +64,5 @@ class FileStorage:
             if obj in self.__objects.values():  # get key so you can pop item
                 objkey = obj.__class__.__name__ + "." + obj.id
                 self.__objects.pop(objkey, None)
-        else:
+        elif obj is None:
             return
