@@ -5,7 +5,7 @@ from os import getenv
 from sqlalchemy import create_engine
 
 class DBStorage:
-    """"this class creates engine and manages database storage of hbnb models"""
+    """this class creates engine and manages database storage of hbnb models"""
     # private class attributes
     __engine = None
     __session = None
@@ -33,7 +33,7 @@ class DBStorage:
         objdict = {}  # method needs to return a dictionary
         filterdic = {}  # dictionary to return a filtered query's results
         if cls is None:
-
+            pass
 
     def close(self):
         """call remove method on the private __session attr"""
