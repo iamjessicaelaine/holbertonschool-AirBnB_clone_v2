@@ -43,6 +43,8 @@ class FileStorage:
         from models.city import City
         from models.amenity import Amenity
         from models.review import Review
+        from models.base_model import BaseModel
+
 
         classes = {
                     'BaseModel': BaseModel, 'User': User, 'Place': Place,
@@ -62,7 +64,7 @@ class FileStorage:
         """Deletes obj from __objects if it exists"""
         if obj in self.__objects.values():
             key = obj.__class__.__name__ + "." + obj.id
-            self.__objects.pop(key)
+            self.__objects.pop(key, None)
         elif obj is None:
             return
 
