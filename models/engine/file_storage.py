@@ -45,7 +45,6 @@ class FileStorage:
         from models.review import Review
         from models.base_model import BaseModel
 
-
         classes = {
                     'BaseModel': BaseModel, 'User': User, 'Place': Place,
                     'State': State, 'City': City, 'Amenity': Amenity,
