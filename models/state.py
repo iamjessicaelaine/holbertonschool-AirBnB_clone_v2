@@ -19,7 +19,7 @@ class State(BaseModel, Base):
         # define relationship between city and state
         cities = relationship('City', backref='state',
                               cascade='all, delete, delete-orphan')
-    elif storagenv == 'file':
+    else:
         @property  # prepare a getter attr to define rltshp of city & state
         def cities(self):
             """returns list of City instances with current state.id"""
