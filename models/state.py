@@ -5,7 +5,7 @@ from sqlalchemy import Column, String
 from os import getenv
 from models.city import City
 from sqlalchemy.orm import relationship
-from models import storage
+import models
 
 
 class State(BaseModel, Base):
